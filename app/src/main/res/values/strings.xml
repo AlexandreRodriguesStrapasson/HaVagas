@@ -2,4 +2,6 @@
     <string name="app_name">HaVagas</string>
     <string name="nome_completo">Nome Completo</string>
     <string name="e_mail">E-mail</string>
+    <string name="texto_checkBox">Receber E-mails sobre ataulizações e oportunidades</string>
+    <string name="telefone">Telefone</string>
 </resources>

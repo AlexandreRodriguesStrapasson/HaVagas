@@ -42,9 +42,28 @@
         android:id="@+id/emailCb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Receber E-mails sobre ataulizações e oportunidades"
+        android:text="@string/texto_checkBox"
         app:layout_constraintTop_toBottomOf="@+id/emailEt"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/telefoneTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telefone"
+        android:layout_marginStart="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/emailCb"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/telefoneEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@+id/telefoneTv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
