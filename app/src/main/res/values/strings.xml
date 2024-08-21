@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HaVagas</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="e_mail">E-mail</string>
+</resources>
