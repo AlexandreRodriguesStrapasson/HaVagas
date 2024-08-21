@@ -63,7 +63,31 @@
         app:layout_constraintTop_toBottomOf="@+id/telefoneTv"
         app:layout_constraintStart_toStartOf="parent"/>
 
+    <CheckBox
+        android:id="@+id/telefoneCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone Celular"
+        app:layout_constraintTop_toBottomOf="@+id/telefoneEt"
+        app:layout_constraintStart_toStartOf="parent"/>
 
+    <LinearLayout
+        android:id="@+id/telefoneLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefoneCb">
+
+        <EditText
+            android:id="@+id/telefoneETLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
