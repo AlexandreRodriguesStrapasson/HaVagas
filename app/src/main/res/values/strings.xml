@@ -4,4 +4,5 @@
     <string name="e_mail">E-mail</string>
     <string name="texto_checkBox">Receber E-mails sobre ataulizações e oportunidades</string>
     <string name="telefone">Telefone</string>
+    <string name="sexo">Sexo</string>
 </resources>
