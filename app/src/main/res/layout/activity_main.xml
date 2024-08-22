@@ -111,5 +111,13 @@
         android:inputType="text"
         app:layout_constraintTop_toBottomOf="@+id/sexoTv"/>
 
+    <Spinner
+        android:id="@+id/formacaoSp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/formacaoArray"
+        app:layout_constraintTop_toBottomOf="@id/sexoEt"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
