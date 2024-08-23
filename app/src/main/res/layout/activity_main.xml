@@ -1,173 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/nomeTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nome_completo"
-        android:layout_marginTop="10sp"
-        android:layout_marginStart="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <EditText
-        android:id="@+id/nomeEt"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/nomeTv"/>
-
-    <TextView
-        android:id="@+id/emailTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/e_mail"
-        android:layout_marginStart="10sp"
-        app:layout_constraintTop_toBottomOf="@+id/nomeEt"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <EditText
-        android:id="@+id/emailEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/emailTv"/>
-
-    <CheckBox
-        android:id="@+id/emailCb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/texto_checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/emailEt"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <TextView
-        android:id="@+id/telefoneTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/telefone"
-        android:layout_marginStart="10sp"
-        app:layout_constraintTop_toBottomOf="@+id/emailCb"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <EditText
-        android:id="@+id/telefoneEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@+id/telefoneTv"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <CheckBox
-        android:id="@+id/telefoneCb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Telefone Celular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefoneEt" />
-
-    <LinearLayout
-        android:id="@+id/telefoneLl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefoneCb">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity">
 
         <TextView
+            android:id="@+id/nomeTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Celular"/>
+            android:text="@string/nome_completo"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <EditText
-            android:id="@+id/telefoneETLl"
+            android:id="@+id/nomeEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"/>
+            app:layout_constraintTop_toBottomOf="@+id/nomeTv"/>
 
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/sexoTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sexo"
-        android:layout_marginStart="10sp"
-        app:layout_constraintTop_toBottomOf="@+id/telefoneLl"
-        app:layout_constraintLeft_toLeftOf="parent"/>
-
-    <EditText
-        android:id="@+id/sexoEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/sexoTv"/>
-
-    <Spinner
-        android:id="@+id/formacaoSp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/formacaoArray"
-        app:layout_constraintTop_toBottomOf="@id/sexoEt"/>
-
-    <LinearLayout
-        android:id="@+id/formacaoLl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-
-        android:padding="5dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/formacaoSp">
-        
-        <EditText
-            android:id="@+id/anoFormaturaEt"
+        <TextView
+            android:id="@+id/emailTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/ano_formatura"
-            android:inputType="date"
-            android:visibility="gone"/>
+            android:text="@string/e_mail"
+            android:layout_marginStart="10sp"
+            app:layout_constraintTop_toBottomOf="@+id/nomeEt"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <EditText
-            android:id="@+id/anoGraduacaoEt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/ano_conclusao"
-            android:inputType="date"
-            android:visibility="gone"/>
-
-        <EditText
-            android:id="@+id/instituicaoEt"
+            android:id="@+id/emailEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/instituicao"
-            android:inputType="text"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toBottomOf="@+id/emailTv"/>
 
-        <EditText
-            android:id="@+id/monografiaEt"
+        <CheckBox
+            android:id="@+id/emailCb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Título de monografia"
-            android:inputType="text"
-            android:visibility="gone"/>
+            android:text="@string/texto_checkBox"
+            app:layout_constraintTop_toBottomOf="@+id/emailEt"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/telefoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/telefone"
+            android:layout_marginStart="10sp"
+            app:layout_constraintTop_toBottomOf="@+id/emailCb"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <EditText
-            android:id="@+id/orientadorEt"
+            android:id="@+id/telefoneEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Orientador"
-            android:inputType="text"
-            android:visibility="gone"/>
-    </LinearLayout>
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@+id/telefoneTv"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/telefoneCb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone Celular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telefoneEt" />
+
+        <LinearLayout
+            android:id="@+id/telefoneLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telefoneCb">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Celular"/>
+
+            <EditText
+                android:id="@+id/telefoneETLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sexoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sexo"
+            android:layout_marginStart="10sp"
+            app:layout_constraintTop_toBottomOf="@+id/telefoneLl"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/sexoEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/sexoTv"/>
+
+        <Spinner
+            android:id="@+id/formacaoSp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/formacaoArray"
+            app:layout_constraintTop_toBottomOf="@id/sexoEt"/>
+
+        <LinearLayout
+            android:id="@+id/formacaoLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/formacaoSp">
+
+            <EditText
+                android:id="@+id/anoFormaturaEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/ano_formatura"
+                android:inputType="date"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/anoGraduacaoEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/ano_conclusao"
+                android:inputType="date"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/instituicaoEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/instituicao"
+                android:inputType="text"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/monografiaEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Título de monografia"
+                android:inputType="text"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/orientadorEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Orientador"
+                android:inputType="text"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
