@@ -5,6 +5,10 @@
     <string name="texto_checkBox">Receber E-mails sobre ataulizações e oportunidades</string>
     <string name="telefone">Telefone</string>
     <string name="sexo">Sexo</string>
+    <string name="ano_formatura">Ano Formatura</string>
+    <string name="ano_conclusao">Ano Conclusão</string>
+    <string name="instituicao">Instituição</string>
+
     <string-array name="formacaoArray">
         <item>Fundamental</item>
         <item>Médio</item>

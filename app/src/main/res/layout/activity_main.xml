@@ -118,6 +118,56 @@
         android:entries="@array/formacaoArray"
         app:layout_constraintTop_toBottomOf="@id/sexoEt"/>
 
+    <LinearLayout
+        android:id="@+id/formacaoLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
 
+        android:padding="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formacaoSp">
+        
+        <EditText
+            android:id="@+id/anoFormaturaEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/ano_formatura"
+            android:inputType="date"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/anoGraduacaoEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/ano_conclusao"
+            android:inputType="date"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/instituicaoEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/instituicao"
+            android:inputType="text"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/monografiaEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Título de monografia"
+            android:inputType="text"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/orientadorEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Orientador"
+            android:inputType="text"
+            android:visibility="gone"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
