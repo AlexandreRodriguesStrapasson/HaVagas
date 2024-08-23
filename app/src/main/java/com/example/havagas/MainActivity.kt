@@ -96,6 +96,8 @@ class MainActivity : AppCompatActivity() {
                         anoFormatura.isVisible = false
                         anoConclusao.isVisible = false
                         instituicao.isVisible = false
+                        monografia.isVisible = false
+                        orientador.isVisible = false
                     }
                 }
             }
