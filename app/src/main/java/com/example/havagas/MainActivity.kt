@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.havagas.databinding.ActivityMainBinding
@@ -50,8 +51,6 @@ class MainActivity : AppCompatActivity() {
                 //NSA
             }
         }
-
-
 
         amb.formacaoSp.onItemSelectedListener = object: OnItemSelectedListener{
             override fun onItemSelected(
@@ -120,6 +119,48 @@ class MainActivity : AppCompatActivity() {
             amb.monografiaEt.text.clear()
             amb.orientadorEt.text.clear()
             amb.campoInteresseEt.text.clear()
+        }
+
+        amb.salvarBt.setOnClickListener {
+            val nomeCompleto =          amb.nomeTv.text.toString()
+            val email =                 amb.emailEt.text.toString()
+            val telefone =              amb.telefoneEt.text.toString()
+            val checkBoxSelecionada =   if (amb.telefoneCb.isChecked) "sim" else "não"
+            val emailCheckBox =         if(amb.emailCb.isChecked) "sim" else "não"
+            val celular =               amb.telefoneETLl.text.toString()
+            val sexo =                  amb.sexoEt.text.toString()
+            val formacao =              amb.formacaoSp.selectedItem.toString()
+            val anoFormatura =          amb.anoFormaturaEt.text.toString()
+            val graduacao =             amb.anoGraduacaoEt.text.toString()
+            val instituicao =           amb.instituicaoEt.text.toString()
+            val monografia =            amb.monografiaEt.text.toString()
+            val orientador =            amb.orientadorEt.text.toString()
+
+
+            var mensagem = "Nome Completo: $nomeCompleto \n" +
+                    "E-mail: $email \n" +
+                    "Telefone: $telefone \n" +
+                    "Celuar: $checkBoxSelecionada \n" +
+                    "Deseja receber E-mails: $emailCheckBox \n" +
+                    "Sexo: $sexo \n" +
+                    "Formacao: $formacao \n"
+
+            if (amb.telefoneCb.isChecked) mensagem += "celular: $celular \n"
+            when (formacao){
+                "Fundamental",  "Médio"       -> mensagem += "$anoFormatura \n"
+                "Graduação", "Especialização" -> mensagem +=  "Ano Graduação: $graduacao \n" +
+                                                        "Insituicao: $instituicao"
+                "Mestrado", "Doutorado"       -> mensagem += "Ano Graduação: $graduacao \n" +
+                                                        "Insituicao: $instituicao \n" +
+                                                        "Titulo de monografia: $monografia \n" +
+                                                        "Orientador: $orientador \n"
+            }
+
+            Toast.makeText(
+            this@MainActivity,
+                    mensagem,
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }
