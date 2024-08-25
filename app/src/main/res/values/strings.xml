@@ -14,6 +14,7 @@
     <string name="limpar">Limpar</string>
     <string name="titulo_monografia">Título de monografia</string>
     <string name="celular">Celular</string>
+    <string name="telefone_celular">Telefone Celular</string>
 
     <string-array name="formacaoArray">
         <item>Fundamental</item>

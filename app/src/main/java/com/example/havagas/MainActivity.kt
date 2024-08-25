@@ -101,11 +101,25 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 //NSA
             }
+        }
 
+        amb.limparBt.setOnClickListener {
+            amb.nomeEt.text.clear()
+            amb.emailEt.text.clear()
+            amb.telefoneCb.isChecked = false
+            amb.emailCb.isChecked = false
+            amb.telefoneEt.text.clear()
+            amb.telefoneETLl.text.clear()
+            amb.sexoEt.text.clear()
+            amb.formacaoSp.setSelection(0)
+            amb.anoFormaturaEt.text.clear()
+            amb.anoGraduacaoEt.text.clear()
+            amb.monografiaEt.text.clear()
+            amb.orientadorEt.text.clear()
+            amb.campoInteresseEt.text.clear()
         }
     }
 }
