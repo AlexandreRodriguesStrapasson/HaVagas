@@ -8,6 +8,12 @@
     <string name="ano_formatura">Ano Formatura</string>
     <string name="ano_conclusao">Ano Conclusão</string>
     <string name="instituicao">Instituição</string>
+    <string name="orientador">Orientador</string>
+    <string name="salvar">Salvar</string>
+    <string name="campos_nteresse">Campos de interesse</string>
+    <string name="limpar">Limpar</string>
+    <string name="titulo_monografia">Título de monografia</string>
+    <string name="celular">Celular</string>
 
     <string-array name="formacaoArray">
         <item>Fundamental</item>

@@ -25,6 +25,7 @@
             android:id="@+id/nomeEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             app:layout_constraintTop_toBottomOf="@+id/nomeTv"/>
 
         <TextView
@@ -40,6 +41,7 @@
             android:id="@+id/emailEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             app:layout_constraintTop_toBottomOf="@+id/emailTv"/>
 
         <CheckBox
@@ -89,7 +91,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Celular"/>
+                android:text="@string/celular"/>
 
             <EditText
                 android:id="@+id/telefoneETLl"
@@ -159,7 +161,7 @@
                 android:id="@+id/monografiaEt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Título de monografia"
+                android:hint="@string/titulo_monografia"
                 android:inputType="text"
                 android:visibility="gone"/>
 
@@ -167,10 +169,39 @@
                 android:id="@+id/orientadorEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Orientador"
+                android:hint="@string/orientador"
                 android:inputType="text"
                 android:visibility="gone"/>
         </LinearLayout>
+
+        <EditText
+            android:id="@+id/campoInteresseEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/campos_nteresse"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/formacaoLl"/>
+
+
+        <Button
+            android:id="@+id/salvarBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/salvar"
+            android:layout_marginStart="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campoInteresseEt"/>
+
+        <Button
+            android:id="@+id/limparBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/limpar"
+            android:layout_marginEnd="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campoInteresseEt"/>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
