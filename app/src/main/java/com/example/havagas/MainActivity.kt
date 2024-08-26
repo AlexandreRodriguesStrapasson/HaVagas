@@ -135,11 +135,13 @@ class MainActivity : AppCompatActivity() {
             val instituicao =           amb.instituicaoEt.text.toString()
             val monografia =            amb.monografiaEt.text.toString()
             val orientador =            amb.orientadorEt.text.toString()
+            val radioSelecionado =      if (amb.residencialRb.isChecked) "Residencial" else "Comercial"
 
 
             var mensagem = "Nome Completo: $nomeCompleto \n" +
                     "E-mail: $email \n" +
                     "Telefone: $telefone \n" +
+                    "Tipo de Telefone: $radioSelecionado \n" +
                     "Celuar: $checkBoxSelecionada \n" +
                     "Deseja receber E-mails: $emailCheckBox \n" +
                     "Sexo: $sexo \n" +

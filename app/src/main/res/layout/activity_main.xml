@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -69,13 +70,36 @@
             app:layout_constraintTop_toBottomOf="@+id/telefoneTv"
             app:layout_constraintStart_toStartOf="parent"/>
 
+        <RadioGroup
+            android:id="@+id/telefoneRg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/telefoneEt"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioButton
+                android:id="@+id/residencialRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="residencial"/>
+
+            <RadioButton
+                android:id="@+id/comercialRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="comercial"/>
+        </RadioGroup>
+
+
         <CheckBox
             android:id="@+id/telefoneCb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/telefone_celular"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/telefoneEt" />
+            app:layout_constraintTop_toBottomOf="@+id/telefoneRg"
+            tools:ignore="NotSibling" />
 
         <LinearLayout
             android:id="@+id/telefoneLl"
